@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+ body{
+    background:rgb(44,39,39) !important;
+}
+span.last-text{
+    color: blueviolet !important;
+}
+span.text{
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+    position: relative;
+    overflow: hidden;
+}
+.text.last-text::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        background-color:rgb(44,39,39) !important;
+        border-left: 2px solid rgb(27,26,26);
+        animation: animate 4s steps(12) infinite;
+}
+.page1 p{
+    font-style: oblique;
+    font-weight: 100;
+}
+@keyframes animate{
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+.img img{
+    height: 300px;
+    filter: drop-shadow(0 10px 16px yellow);
+}
+.img img:hover{
+    transform: scale(0.9);
+}
+#home{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 90px;
+}
+.page1{
+    margin-top: 90px;
+}
+#skill{
+    margin-top: 90px;
+    text-align: center;  
+}
+.skill1 h1{
+    font-size: 40px !important ;
+    font-style: italic;
+    font-weight: 700;
+    color: palegreen;
+}
+.info p{
+     font-style: oblique;
+     font-weight: 100;
+}
+#skillsimg{
+    display: block;
+    justify-content: space-between;
+    color: white;
+}
+#skillsimg .col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col .img1 img{
+    height: 90%;
+}
+.col .img1{
+    display: flex;
+    text-align: center;
+    margin-left: 60px;
+    margin: 30px;
+    width: 90%;
+    height: 50%;
+    box-shadow:  0 10px 20px rgba(0, 0, 0, 0.45), 0 10px 10px rgba(0, 0, 0, 0.71);
+    border-radius: 20px;
+}
+.col .img1:hover{
+    box-shadow: 0 15px 25px,0 15px 20px;
+    transform: scale(0.9);
+}
+.col .img1 h1{
+     font-size: 30px !important;
+      text-align: center;
+      margin-top: 40px;
+}
+@media (max-width:800px){
+    span .frist-text{
+        font-size: 30px;
+    }
+    span .last-text{
+        font-size: 30px;
+    }
+    #skillsimg .col{
+        display: grid;
+        grid-template-columns: 1fr ;
+        overflow: hidden;
+    }
+    .col .img1 h1{
+        font-size: 19px !important;
+         text-align: center;
+         margin-top: 10px;
+   }
+   .col .img1 img{
+        height: 50px;
+   }
+   .col .img1{
+     width: 90%;
+     text-align: center;
+     margin: 10px;
+     padding: 17px;
+     height: 80%;
+   }
+}
+@media (max-width:320px) {
+    span .frist-text{
+        font-size: 18px;
+    }
+    span .last-text{
+        font-size: 18px;
+    }
+    .col .img1{
+        width: 90%;
+        margin: auto;
+        height: 80%;
+        box-shadow: 0 10px 20px black, 0 5px 7px black;
+      }
+      .col .img1 img{
+        height: 50px;
+      }
+      .col .img1 h1{
+        text-align: center;
+        margin-top: 3px;
+      }
+}
+footer{
+    width: auto;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    background:#1c1c1f;
+    padding: 5px;
+    box-shadow: 0 15px 29px rgba(0,0,0,0.29);
+}
